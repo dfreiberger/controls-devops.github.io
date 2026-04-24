@@ -191,6 +191,7 @@ We use on-premise agents for various parts of the DevOps infrastructure.
 This is a powershell script that calls into a separate CLI that I created that wraps around Automation Interface. Although I wrote mine from scratch, borrowing heavily from online examples and resources, you should be able to use an agent to quickly re-create the same functionality.
 
 > Hey Claude, create a .NET 10 CLI using https://www.nuget.org/packages/Beckhoff.TwinCAT.TCatSysManager/ and the DTE to provide functions for building a TwinCAT 3 project. Refer to online documentation from Beckhoff, ensure that you implement a COM message filter, and write unit tests that check each feature we develop against a real TwinCAT 3 XAE project. Refer to Infosys for each feature that you create before creating it. Features required include:
+>
 >  - Load TwinCAT 3 solution
 >  - Build solution
 >  - Traverse PLC projects
