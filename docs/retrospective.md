@@ -1,6 +1,6 @@
 # Retrospective
 
-An honest look at what's working and what isn't, as of 2025-04-14.
+An honest look at what's working and what isn't, as of 2026-04-24.
 
 ## What works well
 
@@ -10,6 +10,7 @@ An honest look at what's working and what isn't, as of 2025-04-14.
 - Library management works using the TwinCAT Library Repository, although the developer needs to know which branch to pull if they are using a library version that is in development and not yet on `main`.
 - We use TwinCAT Variant Management to handle variations in hardware across machine types. This works fairly well although there is always the concern about an explosion in variations as hardware changes get introduced. We have 150+ PLCs/machines with several different variants deployed.
 - Originally I tried to use Automation Interface to directly Activate Configuration on target PLCs. I realized it works better to create an artifact and use file-based methods to deploy the code. This is beneficial because it is much faster for parallel deployments (you don't need to wait for TwinCAT XAE to start, create the route, and Activate Configuration).
+- Most of the functionality that we built was before the current generation of tools like Claude and Codex - with these tools, tasks that before were put on the back burner because they might be too difficult or take a lot of time are now easy to realize. For example, now we have pipelines that automatically run unit tests, collect build output, and report the errors in the Pull Request. We have pipelines that verify that the version has been incremented before a PR can be merged. We have pipelines to generate MkDocs- style documentation from the PLC code. And issues such as Automation Interface instability are easier to work around by asking Claude to write features such as dialog watchers to catch Codesys errors and automatic COM retry logic.
 
 ## What could be improved
 
