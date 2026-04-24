@@ -78,8 +78,9 @@ flowchart LR
 
 </div>
 
-## How to this document to quickly scaffold a framework
+## How to use this document to quickly scaffold a framework
 
-With modern AI agentic tooling and a plugin like [superpowers](https://github.com/obra/superpowers) you should be able to quickly scaffold a framework that works for your company and the tools that your company uses:
+With agentic tooling and a plugin like [superpowers](https://github.com/obra/superpowers) you should be able to quickly scaffold a framework that works for your company and the tools that your company uses:
 
-> Hey agent, review the documentation in this repository, then help me to brainstorm how to implement this for my company. For each feature that is suggested, walk me through what I need to set up. Instead of Azure DevOps, suggest how I can implement this with Gitlab. Help me to build the CLI tool for TwinCAT using .NET 10. For each feature, research the best practices and documentation before suggesting an approach, for example, review Beckhoff's infosys for documentation on Automation Interface before suggesting how to implement the CLI.
+Prompt
+> Review the documentation in this repository, then help me to brainstorm how to implement this for my company. For each feature that is suggested, walk me through what I need to set up. Instead of Azure DevOps, suggest how I can implement this with Gitlab. Help me to build the CLI tool for TwinCAT using .NET 10. For each feature, research the best practices and documentation before suggesting an approach, for example, review Beckhoff's infosys for documentation on Automation Interface before suggesting how to implement the CLI.
