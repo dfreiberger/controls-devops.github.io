@@ -183,7 +183,9 @@ We use on-premise agents for various parts of the DevOps infrastructure.
 | ------------------ | --------------- | --------------------------------------------------------------------------------------------------------------------- |
 | `controls-build-agent-1` | Windows VM    | XAE installed + Azure agent. Handles all pipelines that require TwinCAT XAE. We build here but don't run using XAR.   |
 | `test-plc-1`             | Beckhoff IPC  | Fully licensed TwinCAT PLC + Azure agent. Receives pre-built PLC artifacts, runs TcUnit, collects unit test results.  |
-| `ansible-agent-1`        | Ubuntu VM     | Handles all on-premise Ansible tasks.                                                                                 |
+| `ansible-agent-1`        | Ubuntu VM     | Handles all on-premise Ansible tasks. |
+
+
 ## BuildTwinCATProject.ps1
 
 This is a powershell script that calls into a separate CLI that I created that wraps around Automation Interface. Although I wrote mine from scratch, borrowing heavily from online examples and resources, you should be able to use an agent to quickly re-create the same functionality.
