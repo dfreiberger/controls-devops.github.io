@@ -111,7 +111,7 @@ Makes changes to I/O much easier to understand.
 ### References
 
 - [Beckhoff source control whitepaper](https://download.beckhoff.com/download/document/automation/twincat3/tc3_sourcecontrol_en.pdf)
-- [Source control tips for TwinCAT](https://github.com/Roald87/TwincatSourceControl)
+- [Source control tips for TwinCAT](https://cookncode.com/twincat/2021/06/07/tc-source-control-tips.html)
 
 ## Development process
 
