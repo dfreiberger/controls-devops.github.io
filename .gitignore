@@ -1,5 +1,23 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+# MkDocs build output
+site/
+
+# MkDocs plugin caches (d2, etc.)
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Scratch directory for ad-hoc scripts (do not commit)
+.scratch/

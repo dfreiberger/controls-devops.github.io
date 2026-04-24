@@ -1,0 +1,120 @@
+site_name: Controls DevOps
+site_description: DevOps workflows for industrial controls with Beckhoff TwinCAT 3, Azure DevOps, and Ansible
+site_author: David Freiberger
+site_url: https://controls-devops.github.io/
+
+repo_url: https://github.com/controls-devops/controls-devops.github.io
+repo_name: controls-devops.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  icon:
+    logo: material/factory
+    repo: fontawesome/brands/github
+  features:
+    # - navigation.instant
+    # - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search
+  - d2:
+      executable: d2
+      layout: dagre
+      theme: 0
+      dark_theme: 200
+      scale: 1.0
+      pad: 100
+      cache: true
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions (pymdownx)
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - TwinCAT 3:
+      - twincat/index.md
+  - Azure DevOps:
+      - azure-devops/index.md
+  - Ansible:
+      - ansible/index.md
+  - Retrospective: retrospective.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/controls-devops
