@@ -6,7 +6,7 @@ An honest look at what's working and what isn't, as of 2025-04-14.
 
 - Having automated tests gives us more confidence in the code that we deploy.
 - Using TcUnit pragmatically for the library works well.
-- Using pytest with OPC-UA to call various PLC functions and check results against a VC model using iPhysics works well.
+- Using pytest with OPC-UA to call various PLC functions and check results against a VC model using a Virtual Commissioning software such as Process Simulate or iPhysics works well.
 - Library management works using the TwinCAT Library Repository, although the developer needs to know which branch to pull if they are using a library version that is in development and not yet on `main`.
 - We use TwinCAT Variant Management to handle variations in hardware across machine types. This works fairly well although there is always the concern about an explosion in variations as hardware changes get introduced. We have 150+ PLCs/machines with several different variants deployed.
 - Originally I tried to use Automation Interface to directly Activate Configuration on target PLCs. I realized it works better to create an artifact and use file-based methods to deploy the code. This is beneficial because it is much faster for parallel deployments (you don't need to wait for TwinCAT XAE to start, create the route, and Activate Configuration).

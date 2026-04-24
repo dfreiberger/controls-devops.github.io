@@ -117,7 +117,7 @@ extends:
       - $(Pipeline.Workspace)/machineRepo/repository
 ```
 
-### `build_plc_package.yml` — build step
+### `build_plc_package.yml` - build step
 
 `build_plc_package.yml` contains all of the steps to build a project. The snippet below calls the universal `BuildTwinCATProject.ps1` script, which uses Automation Interface to build the project and output either a `.library` file or the Boot folder.
 
@@ -139,7 +139,7 @@ extends:
   artifact: plc-build-output
 ```
 
-### `build_plc_package.yml` — packaging
+### `build_plc_package.yml` - packaging
 
 The same file packages the build output as either a chocolatey package or a nuget library file.
 

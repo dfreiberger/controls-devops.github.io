@@ -1,6 +1,6 @@
 # controls-devops.github.io
 
-Source for [controls-devops.github.io](https://controls-devops.github.io/) — documentation for a DevOps workflow built around Beckhoff TwinCAT 3, Azure DevOps, and Ansible.
+Source for [controls-devops.github.io](https://controls-devops.github.io/) - documentation for a DevOps workflow built around Beckhoff TwinCAT 3, Azure DevOps, and Ansible.
 
 Built with [MkDocs](https://www.mkdocs.org/) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme.
 

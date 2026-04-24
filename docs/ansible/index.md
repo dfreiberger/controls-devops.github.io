@@ -16,7 +16,7 @@ controls-deployments/
 ├── automation/
 │   ├── chocolatey/
 │   ├── pipelines/
-│   │   ├── backup_test_environment.yml      # Scheduled backups of machines via ansible playbooks — JSON (test environment), FTP (lab machines)
+│   │   ├── backup_test_environment.yml      # Scheduled backups of machines via ansible playbooks - JSON (test environment), FTP (lab machines)
 │   │   ├── backup_staging_environment.yml
 │   │   ├── backup_prod_environment.yml
 │   │   ├── build_machine_type_a_version_1.yml   # Build, test, and optionally publish the PLC program to the Azure artifact feed
@@ -58,7 +58,7 @@ Currently, we use Ansible to manage the following aspects of our infrastructure:
 - **Backup of robot controllers**
 - **Backup of PLCs**
 
-For certain Ansible playbooks we also create Azure DevOps pipelines that run the playbook — for example to back up robot controllers on a schedule, or to update PLC code.
+For certain Ansible playbooks we also create Azure DevOps pipelines that run the playbook - for example to back up robot controllers on a schedule, or to update PLC code.
 
 ## PLC deployment
 

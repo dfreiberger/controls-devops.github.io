@@ -69,12 +69,12 @@ controls-machine-type-a/
 │   │   ├── MachineTypeAVersion1.sln
 │   │   └── MachineTypeAVersion1/
 │   │       ├── _Config/          # Independent Project Files so I/O modules show up as .xti files
-│   │       ├── SimIO/            # Virtual commissioning / digital twin (e.g. iPhysics)
-│   │       ├── PrimaryPLC/
+│   │       ├── SimIO/            # Virtual commissioning / digital twin (e.g. Process Simulate, iPhysics, etc)
+│   │       ├── MainPLC/
 │   │       │   ├── MAIN.TcPOU
 │   │       │   ├── PlcTask.TcTTO
-│   │       │   ├── PlcTaskFAst.TcTTO
-│   │       │   ├── PrimaryPLC.plcproj
+│   │       │   ├── PlcTaskFast.TcTTO
+│   │       │   ├── MainPLC.plcproj
 │   │       │   └── …
 │   │       ├── SafetyPLC/
 │   │       │   ├── Hashes.shv    # Enables automatic hash generation for comparing the safety project
@@ -121,7 +121,7 @@ I explored a few methods for versioning and git workflows, but settled on Trunk-
 
 We use a four-part version number. The first three parts follow [semver](https://semver.org/) - MAJOR breaks interface or behavior, MINOR adds features, PATCH is a hotfix from a release branch. The fourth part is a BUILD counter we increment on every change to main, so prototype machines in the field can be identified precisely.
 
-In our workflow, machine PLC projects have the latest version on the main (trunk) branch. This is where the newest features are available. As developers make changes, they increment the "increment" or "build" version, e.g. `3.2.0.323` becomes `3.2.0.324`. Some companies don't specify a version for the main branch, or they specify a date or some other number, since it isn't an official release. We found it easiest to just increment the last digit, that way it is slightly easier to tell what is on different prototype machines in the field.
+In our workflow, machine PLC projects have the latest version on the main (trunk) branch. This is where the newest features are available. As developers make changes, they increment the "increment" or "build" version, e.g. `3.2.0.17` becomes `3.2.0.18`. Some companies don't specify a version for the main branch, or they specify a date or some other number, since it isn't an official release. We found it easiest to just increment the last digit, that way it is slightly easier to tell what is on different prototype machines in the field.
 
 The version we're talking about is the one set on each PLC project (see [Give every PLC project a version](#give-every-plc-project-a-version) above); the [build / test / release pipeline](../azure-devops/index.md#build-test-release-pipelines) reads it when it cuts a package.
 
@@ -142,7 +142,7 @@ Let's say we have a hotfix we need to make. The ideal scenario:
 4. Create a package from the release branch, with version `3.0.2.0`.
 5. Deploy it.
 
-The bigger picture — features and bugfixes merging into main, multiple release branches peeled off at different points, a cherry-picked hotfix, and a major version bump:
+The bigger picture - features and bugfixes merging into main, multiple release branches peeled off at different points, a cherry-picked hotfix, and a major version bump:
 
 ```mermaid
 %%{init: {
